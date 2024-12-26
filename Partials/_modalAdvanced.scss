@@ -1,0 +1,60 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5);
+    .modal-content {
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 8px 0 rgba(0, 0, 0, 0.17);
+        background: #d1d5db;
+        width: 70%;
+        margin: 20% auto;
+        // padding: 2rem 1rem;
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+        animation-name: modalAnime;
+        animation-duration: 2s;
+        @keyframes modalAnime {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        .modal-header {
+            background: $button-bg;
+            color: $modal-bg;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            & h2 {
+                font-weight: bold;
+            }
+            .closeBtn {
+                color: $modal-bg;
+                font-size: 2rem;
+                &:hover {
+                    cursor: pointer;
+                    color: #030712;
+                }
+                // &:focus {
+                //     text-decoration: none;
+                //     outline: 2px solid red;
+                //     box-shadow: 0 0 5px red;
+                // }
+            }
+        }
+        .modal-body {
+            padding: 1rem 2rem;
+        }
+        .modal-footer {
+            padding: 1rem;
+            background: $button-bg;
+            color: $modal-bg;
+            text-align: center;
+        }
+    }
+}
